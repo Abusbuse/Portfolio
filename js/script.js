@@ -2,7 +2,7 @@ function includeHTML() {
     const includes = document.querySelectorAll('[id]');
     includes.forEach(el => {
         let file = el.getAttribute('id') + ".html";
-        fetch(`/partials/${file}`)
+        fetch(`/Portfolio/partials/${file}`)
         .then(response => {
             if (response.ok) {
                 return response.text();
