@@ -249,7 +249,7 @@ button:hover {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     padding: 20px;
     text-align: center;
     transition: box-shadow 0.3s ease-in-out;
@@ -257,7 +257,7 @@ button:hover {
 
 /* Effet au survol */
 .blocProjet:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 /* Style pour les titres */
