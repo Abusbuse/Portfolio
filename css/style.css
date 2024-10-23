@@ -1,22 +1,152 @@
+/* Styles généraux */
+html, body {
+    height: 100%;
+    margin: 0;
+}
 body {
+    margin: 0;
     font-family: 'Inter', sans-serif;
+    background-color: white; /* Fond blanc pour le contenu */
+    color: #333; /* Couleur du texte par défaut */
 }
 
+/* Header */
+/* Style général pour le header */
+header {
+    background-color: #000;
+    padding: 1px 400px;
+}
+
+/* Style pour la barre de navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Style pour les éléments de la navigation gauche (liens) */
+.nav-left {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-left li {
+    margin-right: 20px;
+}
+
+.nav-left li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: small;
+}
+
+header ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Style pour la section droite avec Connexion et Inscription */
+.nav-right {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-right li {
+    margin-left: 20px;
+}
+
+.nav-right li a {
+    color: #000;
+    text-decoration: none;
+    font-size: small;
+}
+
+/* Bouton "S'inscrire" */
+.btn-contact {
+    background-color: #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: small;
+    text-decoration: none;
+}
+
+/* Style pour le logo ou texte de gauche */
+.logo a {
+    font-size: 1.5em;
+    color: #fff;
+    text-decoration: none;
+    font-size: small;
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+footer ul {
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: small;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer .social-links li {
+    margin-right: 10px;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: smaller;
+}
+
+/* Contenu de la page */
 .content {
-    color:blueviolet;
+    background-color: white; /* Fond blanc pour le contenu */
+    padding: 20px;
+    min-height: 80vh; /* S'assure que le contenu a de l'espace avant le footer */
 }
 
+/* Style du contact form */
 .container {
-    width: 80%;
+    width: 40%;
+    min-height: calc(100vh - 120px);
     margin: auto;
     padding: 2rem;
+}
+
+.container h2 {
+    text-align: center;
 }
   
 form {
     background-color: #fff;
     padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 label {
@@ -35,7 +165,7 @@ input, textarea {
 
 button {
     padding: 0.5rem 2rem;
-    background-color: #4CAF50;
+    background-color: #000;
     color: white;
     border: none;
     border-radius: 4px;
@@ -43,5 +173,5 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #222;
 }

@@ -7,14 +7,8 @@
     <title>Contactez-moi</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
-    <!-- <script src="/js/script.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function() {
-            emailjs.init('m2UbHNucx2QNjTMx2');
-        })();
-    </script>
-    
+    <script src="/js/script.js"></script>
     <style>
       .required-star {
         color: red;
@@ -23,9 +17,9 @@
   </head>
   <body>
     <div id="header"></div>
-    <a href="/index.html">Accueil</a>
     <div class="container">
       <h2>Contactez-moi</h2>
+
       <form id="contact-form">
         <label for="name">Nom <span class="required-star">*</span> :</label>
         <input type="text" id="name" name="user_name" required>
@@ -42,25 +36,10 @@
         <p id="champs-obligatoire">Champs obligatoires<span class="required-star">*</span></p>
 
         <button type="submit">Envoyer</button>
-        <p id="success-msg" style="display:none; color: green;">Votre message a été envoyé avec succès !</p>
+        <p id="success-msg" style="display:none; color: rgb(0, 0, 0);">Votre message a été envoyé avec succès !</p>
         <p id="error-msg" style="display:none; color: red;">Une erreur est survenue, veuillez réessayer.</p>
       </form>
     </div>
     <div id="footer"></div>
-
-    <script>
-      document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        emailjs.sendForm('service_d27ns2p', 'template_s8j9qqf', this)
-          .then(function() {
-            document.getElementById('success-msg').style.display = 'block';
-            document.getElementById('error-msg').style.display = 'none';
-          }, function(error) {
-            document.getElementById('error-msg').style.display = 'block';
-            document.getElementById('success-msg').style.display = 'none';
-          });
-      });
-    </script>
   </body>
 </html>
