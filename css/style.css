@@ -11,19 +11,26 @@ body {
 }
 
 /* Header */
-/* Style général pour le header */
 header {
     background-color: #000;
-    padding: 1px 400px;
+    padding: 1px 40px; /* Réduction de la largeur du padding pour la rendre responsive */
 }
 
 /* Style pour la barre de navigation */
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permet à la navigation de passer à la ligne en cas de manque d'espace */
 }
 
-/* Style pour les éléments de la navigation gauche (liens) */
+/* Logo */
+.logo img {
+    max-width: 100%; /* Ajuste le logo en fonction de la taille de l'écran */
+    height: auto;
+}
+
+/* Navigation gauche (liens) */
 .nav-left {
     display: flex;
     align-items: center;
@@ -46,7 +53,7 @@ header ul li a:hover {
     text-decoration: underline;
 }
 
-/* Style pour la section droite avec Connexion et Inscription */
+/* Navigation droite (Contact) */
 .nav-right {
     display: flex;
     align-items: center;
@@ -65,7 +72,7 @@ header ul li a:hover {
     font-size: small;
 }
 
-/* Bouton "S'inscrire" */
+/* Bouton Contact */
 .btn-contact {
     background-color: #fff;
     padding: 5px 15px;
@@ -74,12 +81,64 @@ header ul li a:hover {
     text-decoration: none;
 }
 
-/* Style pour le logo ou texte de gauche */
-.logo a {
-    font-size: 1.5em;
-    color: #fff;
-    text-decoration: none;
-    font-size: small;
+/* Media Query pour les tablettes */
+@media (max-width: 768px) {
+    header {
+        padding: 1px 20px; /* Réduction du padding pour les tablettes */
+    }
+    
+    .nav-left {
+        gap: 10px; /* Espacement réduit entre les éléments */
+    }
+
+    .btn-contact {
+        padding: 5px 10px; /* Réduction de la taille du bouton */
+    }
+}
+
+/* Media Query pour les téléphones mobiles */
+@media (max-width: 480px) {
+    header {
+        padding: 1px 10px;
+    }
+    
+    /* Affichage en colonne pour les petits écrans */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start; /* Alignement du contenu à gauche sur mobile */
+    }
+
+    /* Navigation gauche */
+    .nav-left {
+        flex-direction: column;
+        width: 100%; /* Prend toute la largeur de l'écran */
+        margin-bottom: 20px; /* Espacement avec le contenu suivant */
+    }
+
+    .nav-left li {
+        margin-right: 0;
+        margin-bottom: 10px; /* Ajout d'espacement entre les éléments en colonne */
+    }
+
+    .nav-left li a {
+        font-size: 1em; /* Taille du texte augmentée pour faciliter la lecture */
+    }
+
+    /* Navigation droite (Contact) */
+    .nav-right {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-right li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .btn-contact {
+        width: 100%; /* Le bouton prend toute la largeur sur mobile */
+        text-align: center;
+    }
 }
 
 /* Footer */
@@ -126,7 +185,7 @@ footer p {
 /* Contenu de la page */
 .content {
     background-color: white; /* Fond blanc pour le contenu */
-    padding: 20px;
+    padding: 40px;
     min-height: 80vh; /* S'assure que le contenu a de l'espace avant le footer */
 }
 
@@ -175,3 +234,76 @@ button {
 button:hover {
     background-color: #222;
 }
+
+/* Projets */
+/* Conteneur général pour les projets */
+.projetsUniv {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grille responsive */
+    gap: 20px; /* Espacement entre les projets */
+    padding: 20px;
+}
+
+/* Style pour chaque bloc de projet */
+.blocProjet {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Effet au survol */
+.blocProjet:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Style pour les titres */
+.blocProjet h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Style pour le texte descriptif */
+.blocProjet p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Style pour les images */
+.blocProjet img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+/* Style pour le bouton */
+.blocProjet a {
+    display: inline-block;
+    background-color: #000000;
+    align-items: center;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.blocProjet a:hover {
+    background-color: #004c99;
+}
+
+/* Responsive: Pour les petits écrans */
+@media (max-width: 768px) {
+    .projetsUniv {
+        grid-template-columns: 1fr; /* Afficher une seule colonne sur mobile */
+    }
+}
+
