@@ -1,10 +1,11 @@
 /* Styles généraux */
 html, body {
-    height: 100%;
     margin: 0;
+    padding: 0;
+    height: 100%; /* S'assure que le contenu occupe 100% de la hauteur */
+    box-sizing: border-box;
 }
 body {
-    margin: 0;
     font-family: 'Inter', sans-serif;
     background-color: white; /* Fond blanc pour le contenu */
     color: #333; /* Couleur du texte par défaut */
@@ -12,16 +13,22 @@ body {
 
 /* Header */
 header {
+    position: fixed;
+    top: 0;
+    width: 100%;
     background-color: #000;
-    padding: 1px 40px; /* Réduction de la largeur du padding pour la rendre responsive */
+    color: white;
+    z-index: 1000;
+    padding: 15px 40px;
+    transition: transform 0.3s ease;
 }
 
 /* Style pour la barre de navigation */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap; /* Permet à la navigation de passer à la ligne en cas de manque d'espace */
+    flex-wrap: wrap;
 }
 
 /* Logo */
@@ -33,7 +40,6 @@ header {
 /* Navigation gauche (liens) */
 .nav-left {
     display: flex;
-    align-items: center;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -62,11 +68,7 @@ header ul li a:hover {
     margin: 0;
 }
 
-.nav-right li {
-    margin-left: 20px;
-}
-
-.nav-right li a {
+.nav-right a {
     color: #000;
     text-decoration: none;
     font-size: small;
@@ -105,7 +107,7 @@ header ul li a:hover {
     /* Affichage en colonne pour les petits écrans */
     .navbar {
         flex-direction: column;
-        align-items: flex-start; /* Alignement du contenu à gauche sur mobile */
+        align-items: flex-start;
     }
 
     /* Navigation gauche */
@@ -143,13 +145,13 @@ header ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
     position: relative;
-    width: 100%;
     bottom: 0;
+    width: 100%;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
 }
 
 footer ul {
@@ -184,17 +186,46 @@ footer p {
 
 /* Contenu de la page */
 .content {
-    background-color: white; /* Fond blanc pour le contenu */
-    padding: 40px;
-    min-height: 80vh; /* S'assure que le contenu a de l'espace avant le footer */
+    padding: 100px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
 }
+
+h3 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #004c99;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #000000;
+}
+
 
 /* Style du contact form */
 .container {
+    padding: 100px 40px;
     width: 40%;
     min-height: calc(100vh - 120px);
     margin: auto;
-    padding: 2rem;
+}
+
+.content img {
+    max-width: 100%;
 }
 
 .container h2 {
@@ -237,73 +268,99 @@ button:hover {
 
 /* Projets */
 /* Conteneur général pour les projets */
+
+.projetStage {
+    .blocProjet {
+        margin: 40px auto;
+    }
+
+    .blocProjet img {
+        width: fit-content;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+}
 .projetsUniv {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grille responsive */
-    gap: 20px; /* Espacement entre les projets */
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Grille adaptable */
+    gap: 40px; /* Augmenter l'espacement pour aérer */
+    padding: 40px;
+    background-color: #ffffff; /* Couleur de fond douce pour faire ressortir les projets */
+    margin: 40px auto;
+    max-width: 1200px; /* Limite la largeur de la section */
 }
 
-/* Style pour chaque bloc de projet */
 .blocProjet {
-    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #ffffff;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     padding: 20px;
     text-align: center;
-    transition: box-shadow 0.3s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Effet au survol */
 .blocProjet:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Style pour les titres */
-.blocProjet h3 {
-    font-size: 1.2em;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-/* Style pour le texte descriptif */
-.blocProjet p {
-    font-size: 0.9em;
-    color: #666;
-    margin-bottom: 15px;
-    line-height: 1.5;
-}
-
-/* Style pour les images */
 .blocProjet img {
     max-width: 100%;
     height: auto;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
 }
 
-/* Style pour le bouton */
 .blocProjet a {
-    display: inline-block;
-    background-color: #000000;
-    align-items: center;
-    color: white;
+    width: fit-content; /* Ajuste la taille du bouton au contenu */
+    margin-top: 20px; /* Ajoute de l'espace entre le texte et le bouton */
     padding: 10px 20px;
-    border-radius: 20px;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 30px;
+    font-weight: bold;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .blocProjet a:hover {
-    background-color: #004c99;
+    background-color: #272727;
 }
 
-/* Responsive: Pour les petits écrans */
-@media (max-width: 768px) {
-    .projetsUniv {
-        grid-template-columns: 1fr; /* Afficher une seule colonne sur mobile */
+.blocProjet img {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeInUp 0.3s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
+
+@media (max-width: 768px) {
+    .content {
+        padding: 275px 80px;
+    }
+    .container {
+        padding: 275px 80px;
+    }
+
+    .projetsUniv {
+        padding: 20px;
+        gap: 20px;
+    }
+
+    header {
+        padding: 10px 20px;
+    }
+}
