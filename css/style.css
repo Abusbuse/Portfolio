@@ -8,7 +8,7 @@ html, body {
 body {
     font-family: 'Inter', sans-serif;
     background-color: white; /* Fond blanc pour le contenu */
-    color: #000000; /* Couleur du texte par défaut */
+    color: #000000; 
 }
 
 /* Styles généraux */  
@@ -64,10 +64,6 @@ header {
     border-radius: 20px;
     text-decoration: none;
     font-size: small;
-}
-
-.btn-contact:hover {
-    background-color: #ffffff;
 }
 
 /* Responsive pour les écrans de 769px à 1024px */
@@ -197,29 +193,28 @@ footer p {
 
 h2 {
     font-size: 1.75rem;
-    color: #333;
+    color: #000000;
 }
 
 h3 {
     font-size: 1.5rem;
-    color: #555;
+    color: #161616;
 }
 
 p {
     font-size: 1em;
-    color: #555;
+    color: #3f3f3f;
     line-height: 1.6;
     margin-bottom: 20px;
 }
 
 a {
-    color: #004c99;
-    text-decoration: underline;
-    transition: color 0.3s ease;
+    color: #000000;
+    text-decoration:underline;
 }
 
 a:hover {
-    color: #000000;
+    color: #757575;
 }
 
 
