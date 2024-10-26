@@ -16,6 +16,10 @@ header {
     background-color: #000;
     color: #fff;
     padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .navbar {
@@ -65,6 +69,22 @@ header {
 .btn-contact:hover {
     background-color: #ffffff;
 }
+
+/* Responsive pour les écrans de 769px à 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar {
+      max-width: 800px; /* Réduction de la largeur max pour correspondre à l'écran */
+      padding: 0 10px;
+    }
+  
+    .nav-center li {
+      margin: 0 10px;
+    }
+  
+    .btn-contact {
+      padding: 6px 12px;
+    }
+  }
 
 @media (max-width: 768px) {
     .navbar {
@@ -148,11 +168,41 @@ footer p {
     margin: 0 auto;
     font-family: 'Inter', sans-serif;
 }
+.main {
+    padding-top: 80px; /* Espace pour le header fixe */
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.section {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.about-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.personal-info ul, .missions {
+    padding-left: 20px;
+    list-style: none;
+}
+
+h2 {
+    font-size: 1.75rem;
+    color: #333;
+}
 
 h3 {
-    font-size: 1.6em;
-    color: #333;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #555;
 }
 
 p {

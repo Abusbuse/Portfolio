@@ -1,119 +1,102 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Présentation personnelle</title>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="/css/style.css">
-        <script src="/js/script.js"></script>
-    </head>
-    <body>
-        <div id="header"></div>
-        <div class="content">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Présentation personnelle - Grégory Wittmann</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/script.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+
+    <!-- Contenu principal -->
+    <main class="content">
+        <!-- Section À propos de moi -->
+        <section id="about" class="section about">
             <h2>À propos de moi</h2>
-            <div class="prePer">
-                <img src="/assets/pdp_modified.jpg" alt="Photo de moi" height="150px">
-                <h3>Présentation personnelle</h3>
-                <ul>
-                    <li>Grégory Wittmann</li>
-                    <li>Né le 20 janvier 2003</li>
-                    <li>Appliqué et toujours de bonne humeur</li>
-                    <li>Vif intérêt pour le développement web</li>
-                </ul>
+            <div class="about-content">
+                <img src="/assets/pdp_modified.jpg" alt="Photo de Grégory" class="profile-pic">
+                <div class="personal-info">
+                    <h3>Présentation personnelle</h3>
+                    <ul>
+                        <li>Grégory Wittmann</li>
+                        <li>Né le 20 janvier 2003</li>
+                        <li>Appliqué et toujours de bonne humeur</li>
+                        <li>Vif intérêt pour le développement web</li>
+                    </ul>
+                </div>
             </div>
-            <div class="parcAca">
-                <h3>Parcours académique</h3>
-                <ul>
-                    <li>BUT Informatique obtenu avec brio en 2024, spécialité développement web.</li>
-                    <li>Baccalauréat obtenu avec succès en 2021, spécialités Mathématiques et Physique.</li>
-                </ul>
-            </div>
-            <div class="parPro">
-                <h3>Parcours professionnel</h3>
-                <h4>Stage Développeur web</h4>
+        </section>
+
+        <!-- Section Parcours académique -->
+        <section id="academic" class="section">
+            <h2>Parcours académique</h2>
+            <ul>
+                <li>BUT Informatique obtenu en 2024, spécialité développement web.</li>
+                <li>Baccalauréat obtenu en 2021, spécialités Mathématiques et Physique.</li>
+            </ul>
+        </section>
+
+        <!-- Section Parcours professionnel -->
+        <section id="experience" class="section">
+            <h2>Parcours professionnel</h2>
+            <div class="job">
+                <h3>Stage Développeur web</h3>
                 <p>Stage effectué chez Kardham-Digital durant une période de 3 mois.</p>
-                <p>Missions :</p>
-                <ul>
-                    <li>
-                        1. Développement d'un tableau de bord pour la gestion des statistiques d'un client sous Symfony, en utilisant PHP, JavaScript, SQL, HTML/CSS, 
-                        ainsi que le moteur de templates Smarty et des bibliothèques graphiques (Mapael et Chart.js). Projet développé en autonomie, le tableau de bord est 
-                        désormais opérationnel pour l'entreprise. Ce projet a reçu des retours très positifs et sera réutilisé par l'entreprise pour tester et préparer 
-                        des fonctionnalités destinées aux clients.
-                    </li>
-                    <li>
-                        2. Développement d'une application mobile pour un grand client avec React Native, JavaScript et SCSS. Travail effectué en équipe où j'ai contribué 
-                        à la gestion des bugs, à l'amélioration de l'affichage et à la création de nouveaux écrans. J'ai beaucoup apprécié travailler avec la technologie React.
-                    </li>
-                    <li>
-                        3. Gestion de plusieurs SAV, dont un cas complexe nécessitant la mise à jour d'un framework pour changer les logos sur une application 
-                        (Android/iOS/TV). Cette intervention a pris plus de temps que prévu en raison de l'écart important entre les versions du framework, rendant 
-                        certaines fonctionnalités obsolètes. J'ai finalement réussi à mener à bien ce projet, avec les félicitations de mon maître de stage.
-                    </li>
-                </ul>
-                <h4>Stage en auto-entrepreneur</h4>
-                <p>Stage effectué dans le cadre de ma 2e année, sur une durée de 2 mois.</p>
-                <p>Missions :</p>
-                <ul>
-                    <li>
-                        Développement d'un site de conversion de fichiers à des fins d'expérimentation et de défis.
-                    </li>
-                    <li>
-                        Conception du cahier des charges, analyse de l'existant, benchmarking, description fonctionnelle des besoins et élaboration d'un planning Gantt.
-                    </li>
-                    <li>
-                        Réalisation des maquettes avec Figma.
-                    </li>
-                    <li>
-                        Développement du site avec le framework Django, en proposant une interface utilisateur simple et intuitive. Le site permet 7 types de conversion 
-                        de fichiers, comme la conversion de DOCX en PDF, de HTML en PDF, ou de MP4 en MP3.
-                    </li>
+                <ul class="missions">
+                    <li>Développement d'un tableau de bord pour la gestion des statistiques...</li>
+                    <li>Développement d'une application mobile pour un grand client...</li>
+                    <li>Gestion de plusieurs SAV, dont un cas complexe...</li>
+                    <a href="/projets.html">En savoir plus</a>
                 </ul>
             </div>
-            <div class="comp">
-                <h3>Compétences</h3>
-                <p>Compétences informatiques</p>
-                <ul>
-                    <li>
-                        Gestion de projet, conception de documents et de planning Gantt.
-                    </li>
-                    <li>
-                        Conception de maquettes avec Figma.
-                    </li>
-                    <li>
-                        Langages : PHP, JavaScript, SQL, Python, HTML5, CSS3.
-                    </li>
-                    <li>
-                        Frameworks : Symfony, React, React Native, Ionic, Django.
-                    </li>
-                    <li>
-                        Bases de données : MySQL.
-                    </li>
-                </ul>
-                <p>Compétences humaines</p>
-                <ul>
-                    <li>
-                        Travail en équipe, entraide, bonne humeur, et proposition d'améliorations ou d'optimisations.
-                    </li>
+            <div class="job">
+                <h3>Stage en auto-entrepreneur</h3>
+                <p>Stage en 2e année, durant 2 mois.</p>
+                <ul class="missions">
+                    <li>Développement d'un site de conversion de fichiers...</li>
+                    <li>Conception de maquettes avec Figma...</li>
+                    <li>Développement du site avec Django...</li>
+                    <a href="/projets.html">En savoir plus</a>
                 </ul>
             </div>
-            <div class="objPro">
-                <h3>Objectifs professionnels</h3>
-                <p>Développer mes compétences dans le métier de développeur web.</p>
-            </div>
-            <div class="passTmp">
-                <h3>Passe-temps</h3>
+        </section>
+
+        <!-- Section Compétences -->
+        <section id="skills" class="section">
+            <h2>Compétences</h2>
+            <div class="skills-content">
+                <h3>Compétences techniques</h3>
                 <ul>
-                    <li>
-                        Passionné d'automobile, que ce soit à travers les sports automobiles ou les jeux vidéo.
-                    </li>
-                    <li>
-                        Réalisation de projets personnels comme ce Portfolio.
-                    </li>
+                    <li>Gestion de projet, conception de documents, planning Gantt...</li>
+                    <li>Conception de maquettes avec Figma...</li>
+                    <li>Langages : PHP, JavaScript, SQL, Python, HTML5, CSS3...</li>
+                </ul>
+                <h3>Compétences humaines</h3>
+                <ul>
+                    <li>Travail en équipe, entraide, bonne humeur, propositions d'améliorations...</li>
                 </ul>
             </div>
-        </div>
-        <div id="footer"></div>
-    </body>
+        </section>
+
+        <!-- Section Objectifs professionnels -->
+        <section id="goals" class="section">
+            <h2>Objectifs professionnels</h2>
+            <p>Développer mes compétences dans le métier de développeur web.</p>
+        </section>
+
+        <!-- Section Passe-temps -->
+        <section id="hobbies" class="section">
+            <h2>Passe-temps</h2>
+            <ul>
+                <li>Passionné d'automobile, que ce soit à travers les sports automobiles ou les jeux vidéo.</li>
+                <li>Réalisation de projets personnels comme ce Portfolio.</li>
+            </ul>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+</body>
 </html>
