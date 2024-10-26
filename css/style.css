@@ -8,140 +8,97 @@ html, body {
 body {
     font-family: 'Inter', sans-serif;
     background-color: white; /* Fond blanc pour le contenu */
-    color: #333; /* Couleur du texte par défaut */
+    color: #000000; /* Couleur du texte par défaut */
 }
 
-/* Header */
+/* Styles généraux */  
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
     background-color: #000;
-    color: white;
-    z-index: 1000;
-    padding: 15px 40px;
-    transition: transform 0.3s ease;
+    color: #fff;
+    padding: 10px 20px;
 }
 
-/* Style pour la barre de navigation */
 .navbar {
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px; /* Ajustez la largeur max ici pour correspondre aux marges du contenu */
+    margin: 0 auto;
 }
 
-/* Logo */
-.logo img {
-    max-width: 100%; /* Ajuste le logo en fonction de la taille de l'écran */
-    height: auto;
+.logo-left img {
+    width: 56px;
 }
 
-/* Navigation gauche (liens) */
-.nav-left {
+.nav-center {
     display: flex;
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
-.nav-left li {
-    margin-right: 20px;
+.nav-center li {
+    margin: 0 15px;
 }
 
-.nav-left li a {
+.nav-center a {
     color: #fff;
     text-decoration: none;
     font-size: small;
 }
 
-header ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Navigation droite (Contact) */
-.nav-right {
-    display: flex;
-    align-items: center;
+.contact-right {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
-.nav-right a {
-    color: #000;
-    text-decoration: none;
-    font-size: small;
-}
-
-/* Bouton Contact */
 .btn-contact {
-    background-color: #fff;
-    padding: 5px 15px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 8px 16px;
     border-radius: 20px;
-    font-size: small;
     text-decoration: none;
+    font-size: small;
 }
 
-/* Media Query pour les tablettes */
+.btn-contact:hover {
+    background-color: #ffffff;
+}
+
 @media (max-width: 768px) {
-    header {
-        padding: 1px 20px; /* Réduction du padding pour les tablettes */
-    }
-    
-    .nav-left {
-        gap: 10px; /* Espacement réduit entre les éléments */
-    }
-
-    .btn-contact {
-        padding: 5px 10px; /* Réduction de la taille du bouton */
-    }
-}
-
-/* Media Query pour les téléphones mobiles */
-@media (max-width: 480px) {
-    header {
-        padding: 1px 10px;
-    }
-    
-    /* Affichage en colonne pour les petits écrans */
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+      flex-direction: column;
+      align-items: center;
     }
-
-    /* Navigation gauche */
-    .nav-left {
-        flex-direction: column;
-        width: 100%; /* Prend toute la largeur de l'écran */
-        margin-bottom: 20px; /* Espacement avec le contenu suivant */
+  
+    .nav-center {
+      flex-direction: column;
+      margin-top: 10px;
     }
-
-    .nav-left li {
-        margin-right: 0;
-        margin-bottom: 10px; /* Ajout d'espacement entre les éléments en colonne */
+  
+    .nav-center li {
+      margin: 5px 0;
     }
-
-    .nav-left li a {
-        font-size: 1em; /* Taille du texte augmentée pour faciliter la lecture */
+  
+    .contact-right {
+      margin-top: 10px;
     }
-
-    /* Navigation droite (Contact) */
-    .nav-right {
-        flex-direction: column;
-        width: 100%;
+  }
+  
+  @media (max-width: 480px) {
+    .navbar {
+      padding: 10px;
     }
-
-    .nav-right li {
-        margin-left: 0;
-        margin-bottom: 10px;
+  
+    .logo-left img {
+      width: 48px; /* Taille réduite du logo pour petits écrans */
     }
-
+  
     .btn-contact {
-        width: 100%; /* Le bouton prend toute la largeur sur mobile */
-        text-align: center;
+      padding: 6px 12px; /* Ajustement du bouton pour les petits écrans */
     }
-}
+  }  
 
 /* Footer */
 footer {
