@@ -15,7 +15,7 @@ body {
 header {
     background-color: #000;
     color: #fff;
-    padding: 10px 20px;
+    padding: 0;
     position: fixed;
     top: 0;
     width: 100%;
@@ -43,6 +43,9 @@ header {
 
 .nav-center li {
     margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: small;
 }
 
 .nav-center a {
@@ -66,53 +69,95 @@ header {
     font-size: small;
 }
 
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 22px);
+    z-index: 1000;
+    min-width: 200px;
+    left: 0;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    list-style-type: none;
+}
+
+.dropdown-menu li {
+    margin: 0;
+    padding: 8px 16px;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: rgba(112, 112, 112, 0.2);
+    color: #000000;
+    border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-menu {
+    /* transition-duration: 2s;  */
+    display: block;
+}
+
 /* Responsive pour les écrans de 769px à 1024px */
 @media (min-width: 769px) and (max-width: 1024px) {
     .navbar {
-      max-width: 800px; /* Réduction de la largeur max pour correspondre à l'écran */
-      padding: 0 10px;
+        max-width: 800px; /* Réduction de la largeur max pour correspondre à l'écran */
+        padding: 0 10px;
     }
   
     .nav-center li {
-      margin: 0 10px;
+        margin: 0 10px;
     }
   
     .btn-contact {
-      padding: 6px 12px;
+        padding: 6px 12px;
     }
   }
 
 @media (max-width: 768px) {
     .navbar {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
   
     .nav-center {
-      flex-direction: column;
-      margin-top: 10px;
+        flex-direction: column;
+        margin-top: 10px;
     }
   
     .nav-center li {
-      margin: 5px 0;
+        margin: 5px 0;
     }
   
     .contact-right {
-      margin-top: 10px;
+        margin-top: 10px;
     }
   }
   
   @media (max-width: 480px) {
     .navbar {
-      padding: 10px;
+        padding: 10px;
     }
   
     .logo-left img {
-      width: 48px; /* Taille réduite du logo pour petits écrans */
+        width: 48px; /* Taille réduite du logo pour petits écrans */
     }
   
     .btn-contact {
-      padding: 6px 12px; /* Ajustement du bouton pour les petits écrans */
+        padding: 6px 12px; /* Ajustement du bouton pour les petits écrans */
     }
   }  
 
@@ -144,10 +189,6 @@ footer ul li a {
     font-size: small;
 }
 
-footer ul li a:hover {
-    text-decoration: underline;
-}
-
 footer .social-links li {
     margin-right: 10px;
 }
@@ -155,6 +196,11 @@ footer .social-links li {
 footer p {
     margin: 10px 0;
     font-size: smaller;
+    color: #ffffff;
+}
+
+footer p a {
+    color: #ffffff;
 }
 
 /* Contenu de la page */
