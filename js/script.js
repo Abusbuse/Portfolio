@@ -13,9 +13,47 @@ function includeHTML() {
                     return 'File not found';
                 }
             })
-            .then(data => el.innerHTML = data);
+            .then(data => el.innerHTML = data)
+            .then(() => {
+                // Appel de la fonction pour initialiser le menu déroulant après l'inclusion de l'HTML
+                initializeDropdownMenu();
+            });
         }
     });
+}
+
+// Fonction pour gérer le comportement du menu déroulant avec un délai de fermeture
+function initializeDropdownMenu() {
+    const dropdown = document.querySelector(".dropdown");
+    const dropdownMenu = document.querySelector(".dropdown-menu");
+    let timeout;
+
+    if (dropdown && dropdownMenu) {
+        // Afficher la liste au survol
+        dropdown.addEventListener("mouseenter", function() {
+            clearTimeout(timeout); // Annule le timeout pour éviter qu'elle disparaisse
+            dropdownMenu.style.display = "block";
+        });
+
+        // Délai avant de cacher la liste
+        dropdown.addEventListener("mouseleave", function() {
+            timeout = setTimeout(function() {
+                dropdownMenu.style.display = "none";
+            }, 400); // 2 secondes de délai
+        });
+
+        // Empêcher la fermeture si la souris est sur le menu déroulant
+        dropdownMenu.addEventListener("mouseenter", function() {
+            clearTimeout(timeout);
+        });
+
+        // Appliquer le délai aussi si la souris quitte le menu déroulant
+        dropdownMenu.addEventListener("mouseleave", function() {
+            timeout = setTimeout(function() {
+                dropdownMenu.style.display = "none";
+            }, 2000); // 2 secondes de délai
+        });
+    }
 }
 
 window.onload = function() {
