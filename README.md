@@ -1,10 +1,11 @@
 #  /Portfolio-personnel-Greg
 
 Projet commencé le 14/10/24
+Projet fini le 30/10/24
 
 ## Description
 
-Ce projet a pour objectif de créer un site web  /Portfolio personnel afin de soutenir mes candidatures pour des postes de développeur web. Hébergé sur GitHub Pages, ce site permettra aux recruteurs de découvrir mon parcours, mes compétences et mes projets. Il comprendra plusieurs sections :
+Ce projet a pour objectif de créer un site web Portfolio personnel afin de soutenir mes candidatures pour des postes de développeur web. Hébergé sur GitHub Pages, ce site permettra aux recruteurs de découvrir mon parcours, mes compétences et mes projets. Il comprendra plusieurs sections :
 
 - Page d'accueil : Une introduction avec un message de bienvenue et un aperçu rapide de mes compétences et de mon expérience.
 - Page CV : Mon CV sera disponible en format numérique, avec un bouton permettant de le télécharger.
