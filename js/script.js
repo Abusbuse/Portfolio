@@ -5,7 +5,7 @@ function includeHTML() {
         // Limiter le chargement des fichiers HTML uniquement aux éléments spécifiques
         if (el.id === 'header' || el.id === 'footer') {
             let file = el.getAttribute('id') + ".html";
-            fetch(`Portfolio/partials/${file}`)
+            fetch(` /Portfolio/partials/${file}`)
             .then(response => {
                 if (response.ok) {
                     return response.text();
