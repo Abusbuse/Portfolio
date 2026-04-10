@@ -14,18 +14,31 @@
         <div id="header"></div>
         
         <main class="main-content">
-            <section class="cv-viewer">
-                <h2 class="page-title">Mon CV</h2>
-                
-                <p class="cv-viewer__download-text">
-                    Vous pouvez le <a href=" /Portfolio/assets/CV_WittmannGregory.pdf" class="cv-viewer__download-link" download>télécharger ici</a>.
+            <h2 class="page-title">Curriculum Vitae</h2>
+            
+            <section class="cv-actions">
+                <p class="cv-actions__text">
+                    Consultez mon profil ci-dessous ou téléchargez-le au format PDF pour le garder sous la main.
                 </p>
-                
-                <object data=" /Portfolio/assets/CV_WittmannGregory.pdf" type="application/pdf" class="cv-viewer__pdf">
-                    <p class="cv-viewer__fallback">
-                        Votre navigateur ne prend pas en charge l'affichage des PDF. Vous pouvez <a href=" /Portfolio/assets/CV_WittmannGregory.pdf" class="cv-viewer__download-link">télécharger le fichier ici</a>.
-                    </p>
-                </object>      
+                <a href=" /Portfolio/assets/CV_WittmannGregory.pdf" class="button button--primary cv-actions__btn" download>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    Télécharger mon CV
+                </a>
+            </section>
+
+            <section class="cv-viewer">
+                <div class="cv-viewer__frame">
+                    <object data=" /Portfolio/assets/CV_WittmannGregory.pdf" type="application/pdf" class="cv-viewer__pdf">
+                        <div class="cv-viewer__fallback">
+                            <p>Oups ! Votre navigateur ne permet pas d'afficher le PDF directement.</p>
+                            <a href=" /Portfolio/assets/CV_WittmannGregory.pdf" class="button button--secondary" download>Télécharger le fichier à la place</a>
+                        </div>
+                    </object>
+                </div>
             </section>
         </main>
 

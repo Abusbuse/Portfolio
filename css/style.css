@@ -373,6 +373,63 @@ img, video {
     color: var(--color-error);
 }
 
+/* --- Page CV --- */
+.cv-actions {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.cv-actions__text {
+    font-size: 1.1rem;
+    color: var(--color-text-main);
+    margin-bottom: var(--spacing-md);
+}
+
+.cv-actions__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; 
+}
+
+.cv-viewer {
+    max-width: 900px; 
+    margin: 0 auto;
+}
+
+.cv-viewer__frame {
+    width: 100%;
+    height: 80vh; 
+    min-height: 600px;
+    border-radius: var(--border-radius);
+    overflow: hidden; 
+    box-shadow: var(--box-shadow-hover);
+    border: 1px solid var(--color-border);
+    background-color: var(--color-secondary);
+}
+
+.cv-viewer__pdf {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.cv-viewer__fallback {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: var(--spacing-lg);
+    text-align: center;
+    background-color: var(--color-card-bg);
+}
+
+.cv-viewer__fallback p {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-light);
+}
+
 /* ==========================================================================
    7. FOOTER
    ========================================================================== */
