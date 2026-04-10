@@ -314,6 +314,7 @@ img, video {
    PAGE CONTACT (Look Moderne)
    ========================================================================== */
 
+/* --- Layout Principal --- */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1.5fr; /* 1/3 pour l'info, 2/3 pour le form */
@@ -413,19 +414,48 @@ img, video {
 .contact-form {
     padding: var(--spacing-xl);
     background: white;
-    max-width: 100%; /* On annule le max-width précédent */
+    max-width: 100%;
     margin: 0;
-    box-shadow: none; /* On utilise l'ombre du parent contact-grid */
+    box-shadow: none; 
 }
 
+.contact-form__group {
+    margin-bottom: var(--spacing-md);
+}
+
+.contact-form__label {
+    display: block;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+    color: var(--color-text-dark);
+}
+
+.contact-form__required {
+    color: var(--color-error);
+}
+
+/* Base des inputs restaurée avec les nouvelles couleurs */
 .contact-form__input {
-    background-color: var(--color-secondary);
+    width: 100%;
+    padding: 0.75rem;
     border: 2px solid transparent;
+    background-color: var(--color-secondary);
+    border-radius: var(--border-radius);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
 .contact-form__input:focus {
+    outline: none;
     background-color: white;
     border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.contact-form__input--textarea {
+    min-height: 150px;
+    resize: vertical;
 }
 
 .contact-form__submit {
@@ -434,6 +464,25 @@ img, video {
     font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-top: var(--spacing-sm);
+}
+
+/* Styles des messages d'alerte restaurés */
+.contact-form__message {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    font-weight: 700;
+}
+
+.contact-form__message--success {
+    background-color: #dcfce7;
+    color: var(--color-success);
+}
+
+.contact-form__message--error {
+    background-color: #fee2e2;
+    color: var(--color-error);
 }
 
 /* --- Page CV --- */
