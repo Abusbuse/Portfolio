@@ -1,32 +1,32 @@
-<header>
+<header class="header">
   <nav class="navbar">
-    <a class="logo-left" href="/Portfolio/index.html">
-        <img src="/Portfolio/assets/img/logo_G_White.png" alt="Logo">
+    <a href="/Portfolio/index.html" class="navbar__brand">
+        <img src="/Portfolio/assets/img/logo_G_White.png" alt="Logo de Grégory" class="navbar__logo">
     </a>
     
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
-    <label for="menu-toggle" class="burger-icon">&#9776;</label>
+    <input type="checkbox" id="menu-toggle" class="navbar__checkbox">
+    <label for="menu-toggle" class="navbar__burger" aria-label="Ouvrir le menu">&#9776;</label>
     
-    <div class="nav-links-container">
-        <ul class="nav-center">
-          <li><a href="/Portfolio/index.html">Accueil</a></li>
-          <li><a href="/Portfolio/html/pp.html">A propos</a></li>
-          <li><a href="/Portfolio/html/cv.html">CV</a></li>
-          <li><a href="/Portfolio/html/projets.html">Projets professionnels</a></li>
+    <div class="navbar__menu">
+        <ul class="navbar__list">
+          <li class="navbar__item"><a href="/Portfolio/index.html" class="navbar__link">Accueil</a></li>
+          <li class="navbar__item"><a href="/Portfolio/html/pp.html" class="navbar__link">A propos</a></li>
+          <li class="navbar__item"><a href="/Portfolio/html/cv.html" class="navbar__link">CV</a></li>
+          <li class="navbar__item"><a href="/Portfolio/html/projets.html" class="navbar__link">Projets professionnels</a></li>
           
-          <li class="dropdown">
-            <a style="cursor: pointer;">Projets universitaires ▾</a>
+          <li class="navbar__item navbar__item--dropdown">
+            <span class="navbar__link navbar__link--trigger">Projets universitaires ▾</span>
             <ul class="dropdown-menu">
-              <li><a href="/Portfolio/html/karting.html">Site web de karting</a></li>
-              <li><a href="/Portfolio/html/jdc.html">Les Jardins de Cocagne</a></li>
-              <li><a href="/Portfolio/html/jdcMobile.html">Les Jardins de Cocagne (version mobile)</a></li>
+              <li class="dropdown-menu__item"><a href="/Portfolio/html/karting.html" class="dropdown-menu__link">Site web de karting</a></li>
+              <li class="dropdown-menu__item"><a href="/Portfolio/html/jdc.html" class="dropdown-menu__link">Les Jardins de Cocagne</a></li>
+              <li class="dropdown-menu__item"><a href="/Portfolio/html/jdcMobile.html" class="dropdown-menu__link">Les Jardins de Cocagne (Mobile)</a></li>
             </ul>
           </li>
         </ul>
         
-        <ul class="contact-right">
-          <li><a href="/Portfolio/html/contact.html" class="btn-contact">Contact</a></li>
-        </ul>
+        <div class="navbar__actions">
+          <a href="/Portfolio/html/contact.html" class="button button--primary">Contact</a>
+        </div>
     </div>
   </nav>
 </header>

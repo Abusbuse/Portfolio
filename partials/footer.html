@@ -1,18 +1,29 @@
-<footer>
-  <ul>
-    <li><a href=" /Portfolio/html/index.html">Accueil</a></li>
-    <li><a href=" /Portfolio/html/pp.html">A propos</a></li>
-    <li><a href=" /Portfolio/html/cv.html">CV</a></li>
-    <li><a href=" /Portfolio/html/projets.html">Projets professionnels</a></li>
-    <li><a href=" /Portfolio/html/contact.html">Contact</a></li>
-  </ul>
+<footer class="footer">
+  <nav class="footer__nav" aria-label="Menu de pied de page">
+    <ul class="footer__list">
+      <li class="footer__item"><a href="/Portfolio/html/index.html" class="footer__link">Accueil</a></li>
+      <li class="footer__item"><a href="/Portfolio/html/pp.html" class="footer__link">A propos</a></li>
+      <li class="footer__item"><a href="/Portfolio/html/cv.html" class="footer__link">CV</a></li>
+      <li class="footer__item"><a href="/Portfolio/html/projets.html" class="footer__link">Projets professionnels</a></li>
+      <li class="footer__item"><a href="/Portfolio/html/contact.html" class="footer__link">Contact</a></li>
+    </ul>
+  </nav>
     
   <ul class="social-links">
-    <li><a href="https://github.com/Abusbuse" target="_blank"><img src=" /Portfolio/assets/img/github.png" width="28px"></a></li>
-    <li><a href="https://www.linkedin.com/in/gregory-wittmann-52933a254" target="_blank"><img src=" /Portfolio/assets/img/linkedin.png" width="24px"></a></li>
+    <li class="social-links__item">
+        <a href="https://github.com/Abusbuse" target="_blank" rel="noopener noreferrer" class="social-links__link">
+            <img src="/Portfolio/assets/img/github.png" alt="Mon profil GitHub" class="social-links__icon">
+        </a>
+    </li>
+    <li class="social-links__item">
+        <a href="https://www.linkedin.com/in/gregory-wittmann-52933a254" target="_blank" rel="noopener noreferrer" class="social-links__link">
+            <img src="/Portfolio/assets/img/linkedin.png" alt="Mon profil LinkedIn" class="social-links__icon">
+        </a>
+    </li>
   </ul>
       
-  <p>&copy; 2024 Greg. Tous droits réservés.</p>
-  
-  <p>Site développé par Gregory Wittmann | Hébergé par <a href="https://pages.github.com" target="_blank">GitHub Pages</a></p>
+  <div class="footer__bottom">
+      <p class="footer__copy">&copy; 2024 Greg. Tous droits réservés.</p>
+      <p class="footer__credits">Site développé par Gregory Wittmann | Hébergé par <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer" class="footer__link">GitHub Pages</a></p>
+  </div>
 </footer>
