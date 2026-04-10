@@ -158,6 +158,7 @@ img, video {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .navbar__logo {
@@ -188,6 +189,9 @@ img, video {
     display: flex;
     gap: var(--spacing-md);
     align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .navbar__link {
@@ -394,7 +398,7 @@ img, video {
 .social-links__icon {
     width: 24px;
     height: 24px;
-    filter: invert(1); /* Rend les icônes blanches */
+    filter: invert(0); /* Rend les icônes blanches */
     transition: transform 0.3s ease;
 }
 
