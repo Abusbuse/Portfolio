@@ -310,67 +310,130 @@ img, video {
     color: var(--color-text-light);
 }
 
-/* Formulaire de Contact */
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
+/* ==========================================================================
+   PAGE CONTACT (Look Moderne)
+   ========================================================================== */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* 1/3 pour l'info, 2/3 pour le form */
     background: var(--color-card-bg);
-    padding: var(--spacing-xl);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    border-radius: calc(var(--border-radius) * 2);
+    overflow: hidden;
+    box-shadow: var(--box-shadow-hover);
+    border: 1px solid var(--color-border);
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.contact-form__group {
+/* --- Bloc Visuel (Gauche) --- */
+.contact-visual {
+    background-color: var(--color-text-dark);
+    color: white;
+    padding: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: linear-gradient(135deg, var(--color-text-dark) 0%, #1e293b 100%);
+    position: relative;
+}
+
+/* Petit effet de décoration en fond */
+.contact-visual::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    opacity: 0.1;
+}
+
+.contact-visual__title {
+    color: white;
+    font-size: 1.8rem;
     margin-bottom: var(--spacing-md);
 }
 
-.contact-form__label {
-    display: block;
-    margin-bottom: var(--spacing-sm);
-    font-weight: 700;
-    color: var(--color-text-dark);
+.contact-visual__text {
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-xl);
 }
 
-.contact-form__required {
-    color: var(--color-error);
+.contact-visual__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.contact-visual__item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.contact-visual__item a {
+    color: white;
+}
+
+.contact-visual__icon {
+    font-size: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.contact-visual__footer {
+    margin-top: var(--spacing-xl);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: var(--spacing-md);
+}
+
+.contact-visual__socials {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-sm);
+}
+
+.contact-visual__socials a {
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- Formulaire (Droite) --- */
+.contact-form {
+    padding: var(--spacing-xl);
+    background: white;
+    max-width: 100%; /* On annule le max-width précédent */
+    margin: 0;
+    box-shadow: none; /* On utilise l'ombre du parent contact-grid */
 }
 
 .contact-form__input {
-    width: 100%;
-    padding: 0.75rem;
-    border: 1px solid var(--color-border);
-    border-radius: var(--border-radius);
-    font-family: var(--font-main);
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
+    background-color: var(--color-secondary);
+    border: 2px solid transparent;
 }
 
 .contact-form__input:focus {
-    outline: none;
+    background-color: white;
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
 }
 
-.contact-form__input--textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-.contact-form__message {
-    margin-top: var(--spacing-md);
-    padding: var(--spacing-md);
-    border-radius: var(--border-radius);
-    font-weight: 700;
-}
-
-.contact-form__message--success {
-    background-color: #dcfce7;
-    color: var(--color-success);
-}
-
-.contact-form__message--error {
-    background-color: #fee2e2;
-    color: var(--color-error);
+.contact-form__submit {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 /* --- Page CV --- */
@@ -688,5 +751,13 @@ img, video {
     
     .about-profile__list li::before {
         display: none; /* Cache les petites flèches quand le texte est centré */
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-visual {
+        padding: var(--spacing-lg);
     }
 }
