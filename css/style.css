@@ -197,6 +197,7 @@ img, video {
 .navbar__link {
     color: var(--color-text-light);
     font-weight: 700;
+    white-space: nowrap;
 }
 
 .navbar__link:hover {
@@ -418,22 +419,22 @@ img, video {
    ========================================================================== */
 @media (max-width: 768px) {
     .navbar__burger {
-        display: block; /* Affiche le bouton burger */
+        display: block; 
     }
 
     .navbar__menu {
-        display: none; /* Cache le menu par défaut */
+        display: none; 
         flex-direction: column;
         position: absolute;
         top: 100%;
         left: 0;
         right: 0;
-        background-color: var(--color-background);
-        padding: var(--spacing-lg);
-        box-shadow: 0 10px 10px -5px rgba(0,0,0,0.1);
+        background-color: var(--color-text-dark); 
+        padding: var(--spacing-xl) var(--spacing-lg);
+        box-shadow: 0 10px 10px -5px rgba(0,0,0,0.2);
+        align-items: center; /* Centre le bouton contact */
     }
 
-    /* Le tour de magie du menu Burger sans JS */
     .navbar__checkbox:checked ~ .navbar__menu {
         display: flex;
     }
@@ -442,16 +443,28 @@ img, video {
         flex-direction: column;
         width: 100%;
         text-align: center;
+        position: static;
+        transform: none;
+        gap: var(--spacing-lg);
+        margin-bottom: var(--spacing-lg);
     }
 
     .dropdown-menu {
         position: static;
         box-shadow: none;
-        display: block; /* Toujours visible sur mobile dans le menu déroulé */
-        padding-left: var(--spacing-md);
+        display: none;
+        background-color: rgba(255, 255, 255, 0.05);
+        margin-top: var(--spacing-sm);
+        border-radius: var(--border-radius);
+    }
+    
+    .navbar__item--dropdown:focus-within .dropdown-menu,
+    .navbar__item--dropdown:hover .dropdown-menu,
+    .navbar__item--dropdown:active .dropdown-menu {
+        display: block;
     }
     
     .project-list, .skills-grid, .image-gallery {
-        grid-template-columns: 1fr; /* 1 seule colonne sur mobile */
+        grid-template-columns: 1fr; 
     }
 }
