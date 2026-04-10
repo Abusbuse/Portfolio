@@ -1,6 +1,4 @@
-/* ==========================================================================
-   1. VARIABLES CSS (Le cœur de ton design system)
-   ========================================================================== */
+/* 1. SECTION: VARIABLES CSS */
 :root {
     /* Palette de couleurs */
     --color-primary: #2563eb; /* Bleu moderne tech */
@@ -29,9 +27,8 @@
     --box-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* ==========================================================================
-   2. RESET & BASE (Pour un affichage cohérent sur tous les navigateurs)
-   ========================================================================== */
+/* 2. SECTION: RESET & BASE */
+
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -68,9 +65,8 @@ img, video {
     display: block;
 }
 
-/* ==========================================================================
-   3. LAYOUT & UTILITAIRES
-   ========================================================================== */
+/* 3. SECTION: LAYOUT & UTILITAIRES */
+
 .main-content {
     flex: 1; /* Pousse le footer vers le bas */
     width: 100%;
@@ -101,9 +97,8 @@ img, video {
     display: none !important;
 }
 
-/* ==========================================================================
-   4. BOUTONS
-   ========================================================================== */
+/* 4. SECTION: BOUTONS */
+
 .button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -140,9 +135,8 @@ img, video {
     color: white;
 }
 
-/* ==========================================================================
-   5. HEADER & NAVIGATION
-   ========================================================================== */
+/* 5. SECTION: Header & Navigation */
+
 .header {
     background-color: var(--color-text-dark);
     box-shadow: var(--box-shadow);
@@ -239,9 +233,8 @@ img, video {
     color: var(--color-text-light);
 }
 
-/* ==========================================================================
-   6. SECTIONS & COMPOSANTS (Projets, CV, PP)
-   ========================================================================== */
+/* 6. SECTIONS & COMPOSANTS (Projets, CV, PP) */
+
 /* Cartes de projets (Grille) */
 .project-list, .skills-grid, .image-gallery {
     display: grid;
@@ -310,9 +303,7 @@ img, video {
     color: var(--color-text-light);
 }
 
-/* ==========================================================================
-   PAGE CONTACT (Look Moderne)
-   ========================================================================== */
+/* CONTACT */
 
 /* --- Layout Principal --- */
 .contact-grid {
@@ -542,9 +533,6 @@ img, video {
     color: var(--color-text-light);
 }
 
-/* ==========================================================================
-   PAGE À PROPOS (pp.html)
-   ========================================================================== */
 
 /* --- 1. En-tête de Profil --- */
 .about-profile {
@@ -683,9 +671,8 @@ img, video {
     font-size: 1.1rem;
 }
 
-/* ==========================================================================
-   7. FOOTER
-   ========================================================================== */
+/* 7. SECTION: FOOTER */
+
 .footer {
     background-color: var(--color-text-dark);
     color: white;
@@ -727,9 +714,8 @@ img, video {
     font-size: 0.875rem;
 }
 
-/* ==========================================================================
-   8. RESPONSIVE DESIGN (Mobiles & Tablettes)
-   ========================================================================== */
+/* 8. SECTION: RESPONSIVE DESIGN */
+
 @media (max-width: 768px) {
     .navbar__burger {
         display: block; 
