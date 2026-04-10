@@ -1,25 +1,32 @@
 <header>
   <nav class="navbar">
-    <a class="logo-left" href=" /Portfolio/index.html"><img src=" /Portfolio/assets/img/logo_G_White.png" width="56px"></a>
-    <ul class="nav-center">
-      <li><a href=" /Portfolio/index.html">Accueil</a></li>
-      <li><a href=" /Portfolio/html/pp.html">A propos</a></li>
-      <li><a href=" /Portfolio/html/cv.html">CV</a></li>
-      <li><a href=" /Portfolio/html/projets.html">Projets professionnels</a></li>
-      
-      <!-- Menu principal avec liste déroulante -->
-      <li class="dropdown">
-        <a>Projets universitaires</a>
-        <ul class="dropdown-menu">
-          <li><a href=" /Portfolio/html/karting.html">Site web de karting</a></li>
-          <li><a href=" /Portfolio/html/jdc.html">Les Jardins de Cocagne</a></li>
-          <li><a href=" /Portfolio/html/jdcMobile.html">Les Jardins de Cocagne (version mobile)</a></li>
-        </ul>
-      </li>
-    </ul>
+    <a class="logo-left" href="/Portfolio/index.html">
+        <img src="/Portfolio/assets/img/logo_G_White.png" alt="Logo">
+    </a>
     
-    <ul class="contact-right">
-      <li><a href=" /Portfolio/html/contact.html" class="btn-contact">Contact</a></li>
-    </ul>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="burger-icon">&#9776;</label>
+    
+    <div class="nav-links-container">
+        <ul class="nav-center">
+          <li><a href="/Portfolio/index.html">Accueil</a></li>
+          <li><a href="/Portfolio/html/pp.html">A propos</a></li>
+          <li><a href="/Portfolio/html/cv.html">CV</a></li>
+          <li><a href="/Portfolio/html/projets.html">Projets professionnels</a></li>
+          
+          <li class="dropdown">
+            <a style="cursor: pointer;">Projets universitaires ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="/Portfolio/html/karting.html">Site web de karting</a></li>
+              <li><a href="/Portfolio/html/jdc.html">Les Jardins de Cocagne</a></li>
+              <li><a href="/Portfolio/html/jdcMobile.html">Les Jardins de Cocagne (version mobile)</a></li>
+            </ul>
+          </li>
+        </ul>
+        
+        <ul class="contact-right">
+          <li><a href="/Portfolio/html/contact.html" class="btn-contact">Contact</a></li>
+        </ul>
+    </div>
   </nav>
 </header>
