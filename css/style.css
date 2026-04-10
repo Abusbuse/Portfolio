@@ -208,6 +208,9 @@ img, video {
 .navbar__item--dropdown {
     position: relative;
 }
+.navbar__link--trigger {
+    cursor: pointer;
+}
 
 .dropdown-menu {
     display: none;
@@ -449,12 +452,18 @@ img, video {
         margin-bottom: var(--spacing-lg);
     }
 
+    .navbar__link--trigger {
+        display: block;
+        padding: 0.5rem;
+    }
+
     .dropdown-menu {
         position: static;
         box-shadow: none;
         display: none;
         background-color: rgba(255, 255, 255, 0.05);
-        margin-top: var(--spacing-sm);
+        margin-top: 0;
+        padding-top: var(--spacing-sm);
         border-radius: var(--border-radius);
     }
     
