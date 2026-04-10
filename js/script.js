@@ -29,7 +29,7 @@ window.onload = function() {
         form.addEventListener('submit', function(event) {
             event.preventDefault();
 
-            // Afficher un état de chargement sur le bouton (optionnel mais recommandé)
+            // Afficher un état de chargement sur le bouton
             const btn = this.querySelector('button[type="submit"]');
             const originalText = btn.innerText;
             btn.innerText = "Envoi en cours...";
@@ -37,13 +37,20 @@ window.onload = function() {
 
             emailjs.sendForm('service_d27ns2p', 'template_s8j9qqf', this)
                 .then(function() {
-                    document.getElementById('success-msg').style.display = 'block';
-                    document.getElementById('error-msg').style.display = 'none';
+                    // On retire la classe is-hidden du succès et on s'assure qu'elle est sur l'erreur
+                    document.getElementById('success-msg').classList.remove('is-hidden');
+                    document.getElementById('error-msg').classList.add('is-hidden');
                     form.reset(); // On vide le formulaire après succès
+                    
+                    // Optionnel : on recache le message après 5 secondes
+                    setTimeout(() => {
+                        document.getElementById('success-msg').classList.add('is-hidden');
+                    }, 5000);
                 })
                 .catch(function(error) {
-                    document.getElementById('error-msg').style.display = 'block';
-                    document.getElementById('success-msg').style.display = 'none';
+                    // On fait l'inverse en cas d'erreur
+                    document.getElementById('error-msg').classList.remove('is-hidden');
+                    document.getElementById('success-msg').classList.add('is-hidden');
                 })
                 .finally(function() {
                     btn.innerText = originalText;
