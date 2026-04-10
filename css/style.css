@@ -163,7 +163,7 @@ img, video {
 .navbar__logo {
     height: 40px;
     /* Inverser les couleurs si le logo est blanc et le fond blanc */
-    filter: invert(1); 
+    filter: invert(0); 
 }
 
 /* Menu Burger (Mobile First) */
