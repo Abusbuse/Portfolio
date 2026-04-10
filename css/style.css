@@ -144,7 +144,7 @@ img, video {
    5. HEADER & NAVIGATION
    ========================================================================== */
 .header {
-    background-color: var(--color-background);
+    background-color: var(--color-text-dark);
     box-shadow: var(--box-shadow);
     position: sticky;
     top: 0;
