@@ -4,71 +4,85 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Projet site web Karting</title>
+        <title>Projet site web Karting - Mon Portfolio</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href=" /Portfolio/css/style.css">
         <link rel="icon" type="image/png" href="/Portfolio/assets/img/logo_G_White.ico">
-        <script src=" /Portfolio/js/script.js"></script>
+        <script src=" /Portfolio/js/script.js" defer></script>
     </head>
     <body>
         <div id="header"></div>
-        <div class="content">
-            <h2>Projet universitaire</h2>
-            <h3>Site web pour un club de karting</h3>
-            <img src=" /Portfolio/assets/img/karting-preview.png" alt="Logo du site de karting">
-            <h4>Décomposition du projet</h4>
-            <ul class="liste">
-                <li class="liste-phase">
-                    Phase d'initialisation
-                    <ul>
-                        <li>Recueil des besoins</li>
-                        <li>Etude de la faisabilité</li>
-                        <li>Planification</li>
-                    </ul>
-                </li>
-                <li class="liste-phase">
-                    Phase d'analyse
-                    <ul>
-                        <li>Benchmark</li>
-                        <li>Spécification des besoins</li>
-                        <li>Spécification fonctionnelle</li>
-                        <li>Cahier des charges</li>
-                    </ul>
-                </li>
-                <li class="liste-phase">
-                    Phase de conception
-                    <ul>
-                        <li>Réaliser les maquettes</li>
-                        <li>Recueil photos/images</li>
-                        <li>Rédaction des contenus</li>
-                    </ul>
-                </li>
-                <li class="liste-phase">
-                    Phase de production
-                    <ul>
-                        <li>Site web</li>
-                        <li>Panneau administrateur</li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="result-video">
-                <h3>Résultats obtenus</h3>
-                <div class="video-left">
-                    <h4>Site web</h4>
-                    <video class="video" controls>
-                        <source src=" /Portfolio/assets/video/Sae_SiteWeb.mp4" type="video/mp4">
-                        Votre navigateur ne supporte pas la balise vidéo.
-                    </video>
+        
+        <main class="main-content">
+            <header class="project-header">
+                <span class="project-header__category">Projet universitaire</span>
+                <h2 class="project-header__title">Site web pour un club de karting</h2>
+            </header>
+            
+            <img class="project-hero-image" src=" /Portfolio/assets/img/karting-preview.png" alt="Logo du site de karting">
+            
+            <section class="project-details">
+                <h3 class="project-details__title">Décomposition du projet</h3>
+                <ul class="phase-list">
+                    <li class="phase-list__item">
+                        <h4 class="phase-list__phase-title">Phase d'initialisation</h4>
+                        <ul class="phase-list__tasks">
+                            <li class="phase-list__task">Recueil des besoins</li>
+                            <li class="phase-list__task">Etude de la faisabilité</li>
+                            <li class="phase-list__task">Planification</li>
+                        </ul>
+                    </li>
+                    <li class="phase-list__item">
+                        <h4 class="phase-list__phase-title">Phase d'analyse</h4>
+                        <ul class="phase-list__tasks">
+                            <li class="phase-list__task">Benchmark</li>
+                            <li class="phase-list__task">Spécification des besoins</li>
+                            <li class="phase-list__task">Spécification fonctionnelle</li>
+                            <li class="phase-list__task">Cahier des charges</li>
+                        </ul>
+                    </li>
+                    <li class="phase-list__item">
+                        <h4 class="phase-list__phase-title">Phase de conception</h4>
+                        <ul class="phase-list__tasks">
+                            <li class="phase-list__task">Réalisation des maquettes</li>
+                            <li class="phase-list__task">Recueil photos/images</li>
+                            <li class="phase-list__task">Rédaction des contenus</li>
+                        </ul>
+                    </li>
+                    <li class="phase-list__item">
+                        <h4 class="phase-list__phase-title">Phase de production</h4>
+                        <ul class="phase-list__tasks">
+                            <li class="phase-list__task">Site web</li>
+                            <li class="phase-list__task">Panneau administrateur</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="project-results">
+                <h3 class="project-results__title">Résultats obtenus</h3>
+                
+                <div class="video-gallery">
+                    <figure class="video-gallery__item">
+                        <figcaption class="video-gallery__caption">Site web</figcaption>
+                        <video class="video-gallery__video" controls>
+                            <source src=" /Portfolio/assets/video/Sae_SiteWeb.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la balise vidéo.
+                        </video>
+                    </figure>
+                    
+                    <figure class="video-gallery__item">
+                        <figcaption class="video-gallery__caption">Panneau admin</figcaption>
+                        <video class="video-gallery__video" controls>
+                            <source src=" /Portfolio/assets/video/SAE_JAVA.mp4" type="video/mp4">
+                            Votre navigateur ne supporte pas la balise vidéo.
+                        </video>
+                    </figure>
                 </div>
-                <div class="video-right">
-                    <h4>Panneau admin</h4>
-                    <video class="video" controls>
-                        <source src=" /Portfolio/assets/video/SAE_JAVA.mp4" type="video/mp4">
-                        Votre navigateur ne supporte pas la balise vidéo.
-                    </video>
-                </div>
-            </div>
-        </div>
+            </section>
+            
+        </main>
+
         <div id="footer"></div>
     </body>
 </html>

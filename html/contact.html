@@ -4,43 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Contact</title>
+    <title>Contact - Mon Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href=" /Portfolio/css/style.css">
     <link rel="icon" type="image/png" href="/Portfolio/assets/img/logo_G_White.ico">
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
-    <script src=" /Portfolio/js/script.js"></script>
-    <style>
-      .required-star {
-        color: red;
-      }
-    </style>
+    <script src=" /Portfolio/js/script.js" defer></script>
   </head>
   <body>
     <div id="header"></div>
-    <div class="container">
-      <h2>Contactez-moi</h2>
+    
+    <main class="main-content">
+      <h2 class="page-title">Contactez-moi</h2>
 
-      <form id="contact-form">
-        <label for="name">Nom <span class="required-star">*</span> :</label>
-        <input type="text" id="name" name="user_name" required>
+      <form id="contact-form" class="contact-form">
+        
+        <div class="contact-form__group">
+          <label for="name" class="contact-form__label">Nom <span class="contact-form__required">*</span> :</label>
+          <input type="text" id="name" name="user_name" class="contact-form__input" required>
+        </div>
 
-        <label for="email">Email <span class="required-star">*</span> :</label>
-        <input type="email" id="email" name="user_email" required>
+        <div class="contact-form__group">
+          <label for="email" class="contact-form__label">Email <span class="contact-form__required">*</span> :</label>
+          <input type="email" id="email" name="user_email" class="contact-form__input" required>
+        </div>
 
-        <label for="subject">Objet <span class="required-star">*</span> :</label>
-        <input type="text" id="subject" name="user_subject" required>
+        <div class="contact-form__group">
+          <label for="subject" class="contact-form__label">Objet <span class="contact-form__required">*</span> :</label>
+          <input type="text" id="subject" name="user_subject" class="contact-form__input" required>
+        </div>
 
-        <label for="message">Message <span class="required-star">*</span> :</label>
-        <textarea id="message" name="message" required></textarea>
+        <div class="contact-form__group">
+          <label for="message" class="contact-form__label">Message <span class="contact-form__required">*</span> :</label>
+          <textarea id="message" name="message" class="contact-form__input contact-form__input--textarea" required></textarea>
+        </div>
 
-        <p id="champs-obligatoire">Champs obligatoires<span class="required-star">*</span></p>
+        <p class="contact-form__notice">Champs obligatoires<span class="contact-form__required">*</span></p>
 
-        <button type="submit">Envoyer</button>
-        <p id="success-msg" style="display:none; color: rgb(0, 0, 0);">Votre message a été envoyé avec succès !</p>
-        <p id="error-msg" style="display:none; color: red;">Une erreur est survenue, veuillez réessayer.</p>
+        <button type="submit" class="button button--primary">Envoyer</button>
+        
+        <p id="success-msg" class="contact-form__message contact-form__message--success is-hidden">Votre message a été envoyé avec succès !</p>
+        <p id="error-msg" class="contact-form__message contact-form__message--error is-hidden">Une erreur est survenue, veuillez réessayer.</p>
+        
       </form>
-    </div>
+    </main>
+
     <div id="footer"></div>
   </body>
 </html>

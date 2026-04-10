@@ -4,73 +4,83 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Projet Jardin de Cocagne</title>
+        <title>Projet Jardin de Cocagne - Mon Portfolio</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href=" /Portfolio/css/style.css">
         <link rel="icon" type="image/png" href="/Portfolio/assets/img/logo_G_White.ico">
-        <script src=" /Portfolio/js/script.js"></script>
+        <script src=" /Portfolio/js/script.js" defer></script>
     </head>
     <body>
         <div id="header"></div>
-        <div class="content">
-            <h2>Projet universitaire</h2>
-            <h3>Site web pour l'association les Jardins de Cocagne</h3>
-            <img>
-            <h4>Décomposition du projet</h4>
-            <ul class="liste">
-                <li class="liste-phase">
-                    Phase d'initialisation
-                    <ul>
-                        <li>Kick-Off-Meeting</li>
-                        <li>Benchmark</li>
-                        <li>Formulation du cahier des charges</li>
-                        <li>Proposition technique</li>
-                        <li>Proposition financière</li>
-                        <li>Kanban</li>
-                        <li>Planning</li>
-                    </ul>
-                </li>
-                <li class="liste-phase">
-                    Phase de conception
-                    <ul>
-                        <li>Environnement Docker</li>
-                        <li>Modélisation de la base de données</li>
-                        <li>Réalisation de la maquette avec Figma</li>
-                    </ul>
-                </li>
-                <li class="liste-phase">
-                    Phase de production
-                    <ul>
-                        <li>Mise en place du projet Symfony</li>
-                        <li>Mise en place de la bdd avec MySQL</li>
-                        <li>Réalisation du site web</li>
-                        <li>Tests du site</li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="result-image">
-                <h3>Résultats obtenus</h3>
-                <div class="image-grid">
-                    <div class="image-item">
-                        <img src=" /Portfolio/assets/img/jdc-accueil.jpg" alt="Page d'accueil du site">
-                        <p>Page d'accueil</p>
-                    </div>
-                    <div class="image-item">
-                        <img src=" /Portfolio/assets/img/jdc-nosJardins.png" alt="Carte avec les jardins">
-                        <p>Carte des jardins</p>
-                    </div>
-                    <div class="image-item">
-                        <img src=" /Portfolio/assets/img/jdc-ferme.png" alt="Précision sur un jardin">
-                        <p>Détails d'un jardin</p>
-                    </div>
-                    <div class="image-item">
-                        <img src=" /Portfolio/assets/img/jdc-livraison.png" alt="Planning des livraisons">
-                        <p>Planning de livraison</p>
-                    </div>
-                </div>
-            </div>
+        
+        <main class="main-content">
+            <header class="project-header">
+                <span class="project-header__category">Projet universitaire</span>
+                <h2 class="project-header__title">Site web pour l'association les Jardins de Cocagne</h2>
+            </header>
             
-        </div>
+            <img class="project-hero-image" src="" alt="">
+            
+            <section class="project-details">
+                <h3 class="project-details__title">Décomposition du projet</h3>
+                <ul class="phase-list">
+                    <li class="phase-list__item">
+                        <h4 class="phase-list__phase-title">Phase d'initialisation</h4>
+                        <ul class="phase-list__tasks">
+                            <li class="phase-list__task">Kick-Off-Meeting</li>
+                            <li class="phase-list__task">Benchmark</li>
+                            <li class="phase-list__task">Formulation du cahier des charges</li>
+                            <li class="phase-list__task">Proposition technique</li>
+                            <li class="phase-list__task">Proposition financière</li>
+                            <li class="phase-list__task">Kanban</li>
+                            <li class="phase-list__task">Planning</li>
+                        </ul>
+                    </li>
+                    <li class="phase-list__item">
+                        <h4 class="phase-list__phase-title">Phase de conception</h4>
+                        <ul class="phase-list__tasks">
+                            <li class="phase-list__task">Environnement Docker</li>
+                            <li class="phase-list__task">Modélisation de la base de données</li>
+                            <li class="phase-list__task">Réalisation de la maquette avec Figma</li>
+                        </ul>
+                    </li>
+                    <li class="phase-list__item">
+                        <h4 class="phase-list__phase-title">Phase de production</h4>
+                        <ul class="phase-list__tasks">
+                            <li class="phase-list__task">Mise en place du projet Symfony</li>
+                            <li class="phase-list__task">Mise en place de la bdd avec MySQL</li>
+                            <li class="phase-list__task">Réalisation du site web</li>
+                            <li class="phase-list__task">Tests du site</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="project-results">
+                <h3 class="project-results__title">Résultats obtenus</h3>
+                
+                <div class="image-gallery">
+                    <figure class="image-gallery__item">
+                        <img src=" /Portfolio/assets/img/jdc-accueil.jpg" alt="Page d'accueil du site" class="image-gallery__image">
+                        <figcaption class="image-gallery__caption">Page d'accueil</figcaption>
+                    </figure>
+                    <figure class="image-gallery__item">
+                        <img src=" /Portfolio/assets/img/jdc-nosJardins.png" alt="Carte avec les jardins" class="image-gallery__image">
+                        <figcaption class="image-gallery__caption">Carte des jardins</figcaption>
+                    </figure>
+                    <figure class="image-gallery__item">
+                        <img src=" /Portfolio/assets/img/jdc-ferme.png" alt="Précision sur un jardin" class="image-gallery__image">
+                        <figcaption class="image-gallery__caption">Détails d'un jardin</figcaption>
+                    </figure>
+                    <figure class="image-gallery__item">
+                        <img src=" /Portfolio/assets/img/jdc-livraison.png" alt="Planning des livraisons" class="image-gallery__image">
+                        <figcaption class="image-gallery__caption">Planning de livraison</figcaption>
+                    </figure>
+                </div>
+            </section>
+            
+        </main>
+        
         <div id="footer"></div>
     </body>
 </html>

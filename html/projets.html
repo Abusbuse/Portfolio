@@ -4,68 +4,69 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Projets professionnels</title>
+        <title>Projets professionnels - Mon Portfolio</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href=" /Portfolio/css/style.css">
         <link rel="icon" type="image/png" href="/Portfolio/assets/img/logo_G_White.ico">
-        <script src=" /Portfolio/js/script.js"></script>
+        <script src=" /Portfolio/js/script.js" defer></script>
     </head>
     <body>
         <div id="header"></div>
         
-        <div class="content">
-            <h2>Stage de dernière année chez Kardham-Digital</h2>
-            <img src=" /Portfolio/assets/img/kardham-digital.jpg" alt="logo kardham-digital">
-            <div class="projetStage">
-                <div class="blocProjet">
-                    <h3>Outil d'administration</h3>
-                    <p>
-                        Développement d'un tableau de bord pour la gestion des statistiques d'un client, sous Symfony, en utilisant les langages de programmation 
-                        PHP, JavaScript, SQL, et HTML/CSS, ainsi que le moteur de templates Smarty et des bibliothèques graphiques (Mapael et Chart.js).
-                        Développement en complète autonomie, et le tableau de bord est désormais opérationnel pour l'entreprise. 
-                        J'ai été assez fier du résultat final et n'ai reçu que des retours positifs sur ce projet. L'entreprise l'utilise maintenant comme outil de démonstration 
-                        pour les clients.
-                    </p>
-                    <img src=" /Portfolio/assets/img/kdUnify.png" alt="site KD Unify">
+        <main class="main-content">
+            <h2 class="page-title">Mes Projets Professionnels</h2>
+
+            <section class="pro-stage">
+                <header class="pro-stage__header">
+                    <h3 class="pro-stage__title">Stage de dernière année chez Kardham-Digital</h3>
+                    <img src=" /Portfolio/assets/img/kardham-digital.jpg" alt="Logo Kardham-Digital" class="pro-stage__logo">
+                </header>
+
+                <div class="project-list">
+                    <article class="project-list__item">
+                        <h4 class="project-list__title">Outil d'administration</h4>
+                        <p class="project-list__description">
+                            Développement d'un tableau de bord pour la gestion des statistiques d'un client, sous Symfony, en utilisant les langages de programmation PHP, JavaScript, SQL, et HTML/CSS, ainsi que le moteur de templates Smarty et des bibliothèques graphiques (Mapael et Chart.js). Développement en complète autonomie, et le tableau de bord est désormais opérationnel pour l'entreprise. J'ai été assez fier du résultat final et n'ai reçu que des retours positifs sur ce projet. L'entreprise l'utilise maintenant comme outil de démonstration pour les clients.
+                        </p>
+                        <img src=" /Portfolio/assets/img/kdUnify.png" alt="Site KD Unify" class="project-list__image">
+                    </article>
+                    
+                    <article class="project-list__item">
+                        <h4 class="project-list__title">Application mobile</h4>
+                        <p class="project-list__description">
+                            Développement d'une application mobile pour un grand client avec React Native, en JavaScript et SCSS. Ce projet a été mené en équipe, et j'ai contribué à la gestion des bugs, à l'amélioration des affichages et à la création de nouveaux écrans. J'ai beaucoup apprécié travailler avec la technologie React et de contribuer à un projet très important pour l'entreprise.
+                        </p>
+                        <img src=" /Portfolio/assets/img/confidentiel.jpg" alt="Image confidentielle" class="project-list__image">
+                    </article>
+                    
+                    <article class="project-list__item">
+                        <h4 class="project-list__title">SAV</h4>
+                        <p class="project-list__description">
+                            Pendant cette expérience, j'ai également été chargé de m'occuper de certains SAV, dont un qui a pris beaucoup plus de temps que prévu. Il s'agissait d'un client qui souhaitait changer ses logos sur leur application (Android/iOS/TV), mais la partie TV nécessitait une mise à jour du framework. Cependant, l'écart de version était considérable, et certaines fonctionnalités n'étaient plus disponibles. Finalement, j'ai réussi à mener à bien ce SAV, avec les félicitations de mon maître de stage.
+                        </p>
+                        <img src=" /Portfolio/assets/img/confidentiel.jpg" alt="Image confidentielle" class="project-list__image">
+                    </article>
                 </div>
-                <div class="blocProjet">
-                    <h3>Application mobile</h3>
-                    <p>
-                        Développement d'une application mobile pour un grand client avec React Native, en JavaScript et SCSS. 
-                        Ce projet a été mené en équipe, et j'ai contribué à la gestion des bugs, à l'amélioration des affichages et à la création de nouveaux écrans. 
-                        J'ai beaucoup apprécié travailler avec la technologie React et de contribuer à un projet très important pour l'entreprise.
-                    </p>
-                    <img src=" /Portfolio/assets/img/confidentiel.jpg" alt="image confidentielle">
+            </section>
+
+            <section class="pro-stage">
+                <header class="pro-stage__header">
+                    <h3 class="pro-stage__title">Stage de deuxième année en auto-entrepreneur</h3>
+                    <img src=" /Portfolio/assets/img/autoEntrepreneur.jpg" alt="Logo auto-entrepreneur" class="pro-stage__logo">
+                </header>
+
+                <div class="project-list">
+                    <article class="project-list__item">
+                        <h4 class="project-list__title">ConvertyFile</h4>
+                        <p class="project-list__description">
+                            Ce projet à but de gain d'expérience a été réalisé en auto-entrepreneur durant la période de stage de 2e année. Il a été réalisé avec un collaborateur, Maximilien Blecker. Ce site web permettait aux utilisateurs de convertir leurs fichiers dans différents formats. Des conversions comme le docx vers le pdf, l'html vers le pdf, mp4 vers mp3 ou png vers jpg. Le framework utilisé était Django pour le langage Python qui nous facilitait le processus de conversion. Mais surtout ce projet a été mené depuis sa création, avec la rédaction du cahier des charges, l'analyse de l'existant, une analyse fonctionnelle, un planning Gantt ainsi que la réalisation des maquettes avec Figma.
+                        </p>
+                        <img src=" /Portfolio/assets/img/convertyFile.jpg" alt="Maquettes ConvertyFile" class="project-list__image">
+                    </article>
                 </div>
-                <div class="blocProjet">
-                    <h3>SAV</h3>
-                    <p>
-                        Pendant cette expérience, j'ai également été chargé de m'occuper de certains SAV, dont un qui a pris beaucoup plus de temps que prévu. 
-                        Il s'agissait d'un client qui souhaitait changer ses logos sur leur application (Android/iOS/TV), mais la partie TV nécessitait une mise à jour du framework. 
-                        Cependant, l'écart de version était considérable, et certaines fonctionnalités n'étaient plus disponibles. 
-                        Finalement, j'ai réussi à mener à bien ce SAV, avec les félicitations de mon maître de stage.
-                    </p>
-                    <img src=" /Portfolio/assets/img/confidentiel.jpg" alt="image confidentielle">
-                </div>
-            </div>
-            <h2>Stage de deuxième année en auto-entrepreneur</h2>
-            <img src=" /Portfolio/assets/img/autoEntrepreneur.jpg" alt="image texte auto-entrepreneur">
-            <div class="projetStage">
-                <div class="blocProjet">
-                    <h3>ConvertyFile</h3>
-                    <p>
-                        Ce projet à but de gain d'expérience à été réalisé en auto-entrepreneur durant la période de stage de 2e année.
-                        Il à été réalisé avec un collaborateur, Maximilien Blecker. 
-                        Ce site web permettait aux utilisateurs de convertir leurs fichiers dans différents formats. Des conversions comme le docx vers le pdf, 
-                        l'html vers le pdf, mp4 vers mp3 ou png vers jpg.
-                        Le framework utilisé était Django pour le langage Python qui nous facilitais le processus de conversion.
-                        Mais surtout ce projet à été mené depuis sa création, avec la rédaction du cahier des charges, l'analyse de l'existant, une analyse fonctionnelle, 
-                        un planning Gantt ainsi que la réalisation des maquettes avec Figma.
-                    </p>
-                    <img src=" /Portfolio/assets/img/convertyFile.jpg" alt="maquettes convertyFile">
-                </div>
-            </div>
-        </div>
+            </section>
+        </main>
+        
         <div id="footer"></div>
     </body>
 </html>

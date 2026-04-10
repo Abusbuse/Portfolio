@@ -4,69 +4,80 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Projet Jardin de Cocagne Mobile</title>
+        <title>Projet Jardin de Cocagne Mobile - Mon Portfolio</title>
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href=" /Portfolio/css/style.css">
         <link rel="icon" type="image/png" href="/Portfolio/assets/img/logo_G_White.ico">
-        <script src=" /Portfolio/js/script.js"></script>
+        <script src=" /Portfolio/js/script.js" defer></script>
     </head>
     <body>
         <div id="header"></div>
-        <div class="content">
-            <h2>Projet universitaire</h2>
-            <h3>Application mobile pour l'association les Jardins de Cocagne</h3>
-            <img>
-            <h4>Décomposition du projet</h4>
-            <ul class="liste">
-                <li class="liste-phase">
-                    Phase d'initialisation
-                    <ul>
-                        <li>Proposition technique, Ionic et React native</li>
-                        <li>Planning</li>
-                    </ul>
-                </li>
-                <li class="liste-phase">
-                    Phase de conception
-                    <ul>
-                        <li>Partir d'une API existante</li>
-                    </ul>
-                </li>
-                <li class="liste-phase">
-                    Phase de production
-                    <ul>
-                        <li>Création des différentes vues</li>
-                        <li>Mise en place de l'API</li>
-                        <li>Réalisation du lecteur de QR Code</li>
-                        <li>Réalisation d'une map avec un système d'itinéraire avec Leaflet OpenStreetMap</li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="result-image">
-                <h3>Résultats obtenus</h3>
-                <div class="image-grid">
-                    <div class="image-item">
-                        <img src=" /Portfolio/assets/img/jdcMobile-qrcode.jpg" alt="Scanner de QrCode">
-                        <p>Scanner de QrCode</p>
-                    </div>
-                    <div class="image-item">
-                        <img src=" /Portfolio/assets/img/jdcMobile-scan.jpg" alt="Scanne en cours">
-                        <p>Fonctionnement du scanner</p>
-                    </div>
-                    <div class="image-item">
-                        <img src=" /Portfolio/assets/img/jdcMobile-scanned.jpg" alt="QrCode une fois scanné">
-                        <p>QrCode une fois scanné</p>
-                    </div>
-                    <div class="image-item">
-                        <img src=" /Portfolio/assets/img/jdcMobile-map.jpg" alt="Carte interactive">
-                        <p>Carte interactive</p>
-                    </div><div class="image-item">
-                        <img src=" /Portfolio/assets/img/jdcMobile-maped.jpg" alt="Carte avec un itinéraire">
-                        <p>Carte avec un itinéraire</p>
-                    </div>
-                </div>
-            </div>
+        
+        <main class="main-content">
+            <header class="project-header">
+                <span class="project-header__category">Projet universitaire</span>
+                <h2 class="project-header__title">Application mobile pour l'association les Jardins de Cocagne</h2>
+            </header>
             
-        </div>
+            <img class="project-hero-image" src="" alt="">
+            
+            <section class="project-details">
+                <h3 class="project-details__title">Décomposition du projet</h3>
+                <ul class="phase-list">
+                    <li class="phase-list__item">
+                        <h4 class="phase-list__phase-title">Phase d'initialisation</h4>
+                        <ul class="phase-list__tasks">
+                            <li class="phase-list__task">Proposition technique, Ionic et React native</li>
+                            <li class="phase-list__task">Planning</li>
+                        </ul>
+                    </li>
+                    <li class="phase-list__item">
+                        <h4 class="phase-list__phase-title">Phase de conception</h4>
+                        <ul class="phase-list__tasks">
+                            <li class="phase-list__task">Partir d'une API existante</li>
+                        </ul>
+                    </li>
+                    <li class="phase-list__item">
+                        <h4 class="phase-list__phase-title">Phase de production</h4>
+                        <ul class="phase-list__tasks">
+                            <li class="phase-list__task">Création des différentes vues</li>
+                            <li class="phase-list__task">Mise en place de l'API</li>
+                            <li class="phase-list__task">Réalisation du lecteur de QR Code</li>
+                            <li class="phase-list__task">Réalisation d'une carte avec un système d'itinéraire (Leaflet OpenStreetMap)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="project-results">
+                <h3 class="project-results__title">Résultats obtenus</h3>
+                
+                <div class="image-gallery image-gallery--mobile">
+                    <figure class="image-gallery__item">
+                        <img src=" /Portfolio/assets/img/jdcMobile-qrcode.jpg" alt="Scanner de QrCode" class="image-gallery__image">
+                        <figcaption class="image-gallery__caption">Scanner de QrCode</figcaption>
+                    </figure>
+                    <figure class="image-gallery__item">
+                        <img src=" /Portfolio/assets/img/jdcMobile-scan.jpg" alt="Scanne en cours" class="image-gallery__image">
+                        <figcaption class="image-gallery__caption">Fonctionnement du scanner</figcaption>
+                    </figure>
+                    <figure class="image-gallery__item">
+                        <img src=" /Portfolio/assets/img/jdcMobile-scanned.jpg" alt="QrCode une fois scanné" class="image-gallery__image">
+                        <figcaption class="image-gallery__caption">QrCode une fois scanné</figcaption>
+                    </figure>
+                    <figure class="image-gallery__item">
+                        <img src=" /Portfolio/assets/img/jdcMobile-map.jpg" alt="Carte interactive" class="image-gallery__image">
+                        <figcaption class="image-gallery__caption">Carte interactive</figcaption>
+                    </figure>
+                    <figure class="image-gallery__item">
+                        <img src=" /Portfolio/assets/img/jdcMobile-maped.jpg" alt="Carte avec un itinéraire" class="image-gallery__image">
+                        <figcaption class="image-gallery__caption">Carte avec un itinéraire</figcaption>
+                    </figure>
+                </div>
+            </section>
+            
+        </main>
+
         <div id="footer"></div>
     </body>
 </html>

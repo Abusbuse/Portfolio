@@ -3,110 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Présentation personnelle</title>
+    <title>Présentation personnelle - Mon Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href=" /Portfolio/css/style.css">
     <link rel="icon" type="image/png" href="/Portfolio/assets/img/logo_G_White.ico">
-    <script src=" /Portfolio/js/script.js"></script>
+    <script src=" /Portfolio/js/script.js" defer></script>
 </head>
 <body>
     <div id="header"></div>
 
-    <!-- Contenu principal -->
-    <main class="content">
-        <!-- Section À propos de moi -->
-        <h2>À propos de moi</h2>
-        <section id="about" class="section-about">
-            <div class="about-content">
-                <img src=" /Portfolio/assets/img/pdp_modified.jpg" alt="Photo de Grégory" width="150px">
-                <div class="personal-info">
-                    <h3>Présentation personnelle</h3>
-                    <ul>
-                        <li>Grégory Wittmann</li>
-                        <li>Né le 20 janvier 2003</li>
-                        <li>Appliqué et toujours de bonne humeur</li>
-                        <li>Vif intérêt pour le développement web</li>
+    <main class="main-content">
+        <h2 class="page-title">À propos de moi</h2>
+        
+        <section id="about" class="about-profile">
+            <img src=" /Portfolio/assets/img/pdp_modified.jpg" alt="Photo de Grégory" class="about-profile__image">
+            <div class="about-profile__info">
+                <h3 class="about-profile__title">Présentation</h3>
+                <ul class="about-profile__list">
+                    <li>Grégory Wittmann</li>
+                    <li>Né le 20 janvier 2003</li>
+                    <li>Appliqué et toujours de bonne humeur</li>
+                    <li>Vif intérêt pour le développement web</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="academic" class="resume-section">
+            <h2 class="resume-section__title">Parcours académique</h2>
+            <ul class="timeline-list">
+                <li class="timeline-list__item">BUT Informatique obtenu en 2024, spécialité développement web.</li>
+                <li class="timeline-list__item">Baccalauréat obtenu en 2021, spécialités Mathématiques et Physique.</li>
+            </ul>
+        </section>
+
+        <section id="experience" class="resume-section">
+            <h2 class="resume-section__title">Parcours professionnel</h2>
+            
+            <article class="experience-card">
+                <h3 class="experience-card__title">Stage Développeur web</h3>
+                <h4 class="experience-card__subtitle">Stage effectué chez Kardham-Digital durant une période de 3 mois.</h4>
+                <p class="experience-card__description">
+                    Ce stage a été pour moi une opportunité précieuse de mettre en pratique les connaissances acquises au cours de mes études, mais surtout d'apprendre aux côtés de professionnels sur des projets concrets. J'ai été chaleureusement accueilli et ai eu la chance de rencontrer des personnes formidables. Bien que j'ai eu des doutes initiaux sur la difficulté des missions, mon maître de stage m'a permis de gagner en confiance en me guidant étape par étape pour atteindre les objectifs attendus. En fin de compte, mes supérieurs sont satisfaits de mon travail, et j'en suis personnellement très fier.
+                </p>
+                <ul class="experience-card__tasks">
+                    <li>Développement d'un tableau de bord pour la gestion des statistiques...</li>
+                    <li>Développement d'une application mobile pour un grand client...</li>
+                    <li>Gestion de plusieurs SAV, dont un cas complexe...</li>
+                </ul>
+                <a href=" /Portfolio/html/projets.html" class="button button--secondary">En savoir plus</a>
+            </article>
+
+            <article class="experience-card">
+                <h3 class="experience-card__title">Stage en auto-entrepreneur</h3>
+                <h4 class="experience-card__subtitle">Stage en 2e année sur une période de 2 mois.</h4>
+                <p class="experience-card__description">
+                    J'ai choisi de relever ce défi en tant qu'auto-entrepreneur pour évaluer ma capacité à gérer un projet de manière autonome. Bien que ce projet ait été réalisé avec un collègue, il s'est avéré très formateur. Nous avons rencontré des difficultés tout au long du processus, mais elles étaient surmontables dans le délai de deux mois. Au final, le résultat était à la hauteur de nos attentes, même si, avec le recul, j'identifierais certaines améliorations possibles.
+                </p>
+                <ul class="experience-card__tasks">
+                    <li>Développement d'un site de conversion de fichiers...</li>
+                    <li>Conception de maquettes avec Figma...</li>
+                    <li>Développement du site avec Django...</li>
+                </ul>
+                <a href=" /Portfolio/html/projets.html" class="button button--secondary">En savoir plus</a>
+            </article>
+        </section>
+
+        <section id="skills" class="resume-section">
+            <h2 class="resume-section__title">Compétences</h2>
+            
+            <div class="skills-grid">
+                <div class="skills-grid__category">
+                    <h3 class="skills-grid__title">Compétences techniques</h3>
+                    <ul class="skills-list">
+                        <li class="skills-list__item">Gestion de projet, conception de documents, planning Gantt</li>
+                        <li class="skills-list__item">Conception de maquettes avec Figma</li>
+                        <li class="skills-list__item">Langages : PHP, JavaScript, SQL, Python, HTML5, CSS3</li>
+                        <li class="skills-list__item">Framework : Symfony, React, React Native, Django</li>
+                    </ul>
+                </div>
+                <div class="skills-grid__category">
+                    <h3 class="skills-grid__title">Compétences humaines</h3>
+                    <ul class="skills-list">
+                        <li class="skills-list__item">Travail en équipe, entraide, bonne humeur, propositions d'améliorations...</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- Section Parcours académique -->
-        <section id="academic" class="section">
-            <h2>Parcours académique</h2>
-            <ul>
-                <li>BUT Informatique obtenu en 2024, spécialité développement web.</li>
-                <li>Baccalauréat obtenu en 2021, spécialités Mathématiques et Physique.</li>
-            </ul>
+        <section id="goals" class="resume-section">
+            <h2 class="resume-section__title">Objectifs professionnels</h2>
+            <p class="resume-section__text">Développer mes compétences dans le métier de développeur web. Apprendre auprès de professionnels et plus tard devenir chef d'une équipe de développeurs.</p>
         </section>
 
-        <!-- Section Parcours professionnel -->
-        <section id="experience" class="section">
-            <h2>Parcours professionnel</h2>
-            <div class="job">
-                <h3>Stage Développeur web</h3>
-                <h4>Stage effectué chez Kardham-Digital durant une période de 3 mois.</h4>
-                <p>
-                    Ce stage a été pour moi une opportunité précieuse de mettre en pratique les connaissances acquises au cours de mes études, mais surtout d'apprendre aux côtés de 
-                    professionnels sur des projets concrets. J'ai été chaleureusement accueilli et ai eu la chance de rencontrer des personnes formidables. 
-                    Bien que j'ai eu des doutes initiaux sur la difficulté des missions, mon maître de stage m'a permis de gagner en confiance en me guidant étape par étape 
-                    pour atteindre les objectifs attendus. En fin de compte, mes supérieurs sont satisfaits de mon travail, et j'en suis personnellement très fier.
-                </p>
-                <ul class="missions">
-                    <li>Développement d'un tableau de bord pour la gestion des statistiques...</li>
-                    <li>Développement d'une application mobile pour un grand client...</li>
-                    <li>Gestion de plusieurs SAV, dont un cas complexe...</li>
-                    <a href=" /Portfolio/html/projets.html">En savoir plus</a>
-                </ul>
-            </div>
-            <div class="job">
-                <h3>Stage en auto-entrepreneur</h3>
-                <h4>Stage en 2e année sur une période de 2 mois.</h4>
-                <p>
-                    J'ai choisi de relever ce défi en tant qu'auto-entrepreneur pour évaluer ma capacité à gérer un projet de manière autonome. 
-                    Bien que ce projet ait été réalisé avec un collègue, il s'est avéré très formateur. 
-                    Nous avons rencontré des difficultés tout au long du processus, mais elles étaient surmontables dans le délai de deux mois. 
-                    Au final, le résultat était à la hauteur de nos attentes, même si, avec le recul, j'identifierais certaines améliorations possibles.
-                </p>
-                <ul class="missions">
-                    <li>Développement d'un site de conversion de fichiers...</li>
-                    <li>Conception de maquettes avec Figma...</li>
-                    <li>Développement du site avec Django...</li>
-                    <a href=" /Portfolio/html/projets.html">En savoir plus</a>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Section Compétences -->
-        <section id="skills" class="section">
-            <h2>Compétences</h2>
-            <div class="skills-content">
-                <h3>Compétences techniques</h3>
-                <ul>
-                    <li>Gestion de projet, conception de documents, planning Gantt</li>
-                    <li>Conception de maquettes avec Figma</li>
-                    <li>Langages : PHP, JavaScript, SQL, Python, HTML5, CSS3</li>
-                    <li>Framework : Symfony, React, React Native, Django</li>
-                </ul>
-                <h3>Compétences humaines</h3>
-                <ul>
-                    <li>Travail en équipe, entraide, bonne humeur, propositions d'améliorations...</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Section Objectifs professionnels -->
-        <section id="goals" class="section">
-            <h2>Objectifs professionnels</h2>
-            <p>Développer mes compétences dans le métier de développeur web. Apprendre au près de professionnels et plus tard devenir chef d'une équipe de développeurs.</p>
-        </section>
-
-        <!-- Section Passe-temps -->
-        <section id="hobbies" class="section">
-            <h2>Passe-temps</h2>
-            <ul>
-                <li>Passionné d'automobile, que ce soit à travers les sports automobiles ou les jeux vidéo comme les jeux de simulation.</li>
-                <li>Réalisation de projets personnels comme ce Portfolio.</li>
+        <section id="hobbies" class="resume-section">
+            <h2 class="resume-section__title">Passe-temps</h2>
+            <ul class="timeline-list">
+                <li class="timeline-list__item">Passionné d'automobile, que ce soit à travers les sports automobiles ou les jeux vidéo comme les jeux de simulation.</li>
+                <li class="timeline-list__item">Réalisation de projets personnels comme ce Portfolio.</li>
             </ul>
         </section>
     </main>
