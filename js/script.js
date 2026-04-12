@@ -14,6 +14,16 @@ async function includeHTML() {
             console.error('Erreur réseau lors du chargement de:', file, error);
         }
     }
+    
+    // Mettre à jour l'année automatiquement après le chargement
+    updateYear();
+}
+
+function updateYear() {
+    const yearElement = document.getElementById('year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
 }
 
 window.onload = function() {
