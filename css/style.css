@@ -533,6 +533,16 @@ img, video {
     color: var(--color-text-light);
 }
 
+.cv-viewer__image {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
 
 /* --- 1. En-tête de Profil --- */
 .about-profile {
