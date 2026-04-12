@@ -502,45 +502,31 @@ img, video {
 
 .cv-viewer__frame {
     width: 100%;
-    height: 80vh; 
-    min-height: 600px;
+    height: auto; /* L'image gère maintenant la hauteur toute seule */
     border-radius: var(--border-radius);
-    overflow: hidden; 
+    overflow: hidden; /* Coupe les coins de l'image pour qu'elle épouse le cadre */
     box-shadow: var(--box-shadow-hover);
     border: 1px solid var(--color-border);
     background-color: var(--color-secondary);
 }
 
-.cv-viewer__pdf {
-    width: 100%;
-    height: 100%;
-    display: block;
+/* Le lien qui entoure l'image */
+.cv-viewer__frame a {
+    display: block; /* S'assure que le lien prend tout l'espace */
+    overflow: hidden; /* Empêche le débordement lors du zoom */
 }
 
-.cv-viewer__fallback {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    padding: var(--spacing-lg);
-    text-align: center;
-    background-color: var(--color-card-bg);
-}
-
-.cv-viewer__fallback p {
-    margin-bottom: var(--spacing-md);
-    color: var(--color-text-light);
-}
-
+/* L'image du CV */
 .cv-viewer__image {
     width: 100%;
-    max-width: 900px;
     height: auto;
     display: block;
-    margin: 0 auto 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease; /* Animation fluide */
+}
+
+/* Effet très pro : zoom léger au survol pour montrer que c'est cliquable */
+.cv-viewer__frame a:hover .cv-viewer__image {
+    transform: scale(1.02);
 }
 
 
